@@ -1,0 +1,35 @@
+.section-main {
+  > .container {
+    height: 35%;
+  }
+  .first-item {
+    top: 0;
+    opacity: 1;
+    transition: 1.5s ease-in-out;
+  }
+  .second-item {
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+  }
+  .second-item-main {
+    right: 133px;
+    @media (max-width: 1192px) {
+      right: 0;
+    }
+  }
+  .btn {
+    background-color: #52557d;
+    padding: 15px 30px;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-weight: bold;
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+  .second-heading {
+    font-size: 40px !important;
+    margin-bottom: 20px;
+  }
+}

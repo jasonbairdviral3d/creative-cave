@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Circular-Book";
+  src: url("../fonts/Circular/CircularStd-Book.otf");
+  src: url("../fonts/Circular/CircularStd-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Circular-Bold";
+  src: url("../fonts/Circular/CircularStd-Bold.ttf");
+  src: url("../fonts/Circular/CircularStd-Bold.otf") format("opentype");
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: 0.6s linear;
+  font-family: Circular-Book !important;
+}
+
+.container {
+  transition: 0.5s linear;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Circular-Bold !important;
+  font-weight: bold !important;
+  letter-spacing: 0.8px !important;
+}

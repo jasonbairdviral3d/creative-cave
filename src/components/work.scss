@@ -1,0 +1,222 @@
+.section-work {
+  padding: 200px 0;
+  padding-bottom: 0;
+  //background-color: $grey-bg;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  @media (max-width: 991.98px) {
+    padding: 200px 0;
+  }
+  @media (min-width: 992px) {
+    padding-top: 50vh;
+  }
+  > .container {
+    opacity: 1;
+  }
+  .text-container {
+    text-align: left;
+    color: #55b49b;
+    //position: absolute;
+    @media (min-width: 992px) {
+      width: 50%;
+      margin: auto;
+    }
+    @media (max-width: 991.98px) {
+      text-align: center;
+    }
+  }
+  .text-row {
+    opacity: 0;
+    position: absolute;
+  }
+  .text-row,
+  .left-image-row,
+  .right-image-row {
+    transition: 0.6s linear;
+  }
+  .left-image-row {
+    opacity: 0;
+    position: absolute;
+    margin-bottom: 50px;
+    div[class*="col-"] {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .image-wrapper {
+      position: relative;
+      // padding-top: 80px;
+      z-index: 1;
+      transition: 0.5s linear;
+      bottom: -40px;
+      // &:before {
+      //   position: absolute;
+      //   content: "";
+      //   width: 300px;
+      //   height: 300px;
+      //   left: 0;
+      //   right: 0;
+      //   top: -44px;
+      //   margin: auto;
+      //   background-color: #f6c24f;
+      //   border-radius: 50%;
+      //   z-index: -1;
+      // }
+    }
+    .text-wrapper {
+      @media (max-width: 767.98px) {
+        text-align: center;
+        width: 100%;
+      }
+      @media (min-width: 992px) {
+        width: 30%;
+        margin: auto;
+      }
+      p {
+        font-size: 24px;
+        text-align: center;
+        @media (min-width: 992px) {
+          text-align: left;
+        }
+      }
+    }
+    &.active {
+      .image-wrapper {
+        bottom: 0;
+      }
+      .text-wrapper {
+        transition: 0.5s linear;
+      }
+    }
+  }
+  .right-image-row {
+    opacity: 0;
+    margin-bottom: 50px;
+    //margin-right: -40px;
+    .image-wrapper {
+      position: relative;
+      transition: 0.5s linear;
+      right: -150px;
+
+      @media (max-width: 991.98px) {
+        //padding-top: 80px;
+        //z-index: 1;
+        // &:before {
+        //   position: absolute;
+        //   content: "";
+        //   width: 300px;
+        //   height: 300px;
+        //   // left: -487px;
+        //   left: -437px;
+        //   right: auto;
+        //   top: -4px;
+        //   margin: auto;
+        //   background-color: #f6c24f;
+        //   border-radius: 50%;
+        //   z-index: -1;
+        //   transition: 1s linear;
+        // }
+      }
+      img {
+        @media (min-width: 992px) {
+          // max-width: 58vw;
+        }
+      }
+    }
+    .text-wrapper {
+      text-align: center;
+      width: 90%;
+      margin: auto;
+      a {
+        font-weight: bold;
+      }
+      @media (min-width: 992px) {
+        width: 50%;
+        text-align: left;
+      }
+      p {
+        font-size: 24px;
+      }
+    }
+    &.active {
+      .image-wrapper {
+        right: 0;
+        &:before {
+          left: 140px;
+          top: -25px;
+        }
+      }
+    }
+  }
+
+  .btn-work {
+    background-color: #52557d;
+    padding: 15px 30px;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    position: absolute;
+    top: 200%;
+    opacity: 0;
+    transition: 0.5s linear;
+    transition-delay: 1s;
+    @media (max-width: 991.98px) {
+      position: static;
+    }
+  }
+  .btn-work-active {
+    top: 100%;
+  }
+}
+
+.text-with-bg {
+  background-color: #f6c24f;
+}
+
+.section-title {
+  margin-left: 20px;
+  font-size: 25px;
+  color: #52557d;
+  opacity: 1;
+  transition: 0.5s linear;
+}
+
+.work-title {
+  margin-left: 20px;
+  font-size: 25px;
+  color: #52557d;
+  opacity: 0;
+  transition: 0.5s linear;
+}
+
+.image-div {
+  position: absolute;
+  top: 5%;
+  // left: 0;
+  right: 58%;
+  opacity: 0;
+  z-index: -1;
+  transition: top 0.5s linear, right 0.7s linear, opacity 0.5s linear;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-image-div {
+  position: absolute;
+  top: 0;
+  // left: 0;
+  right: 2%;
+  opacity: 0;
+  z-index: -1;
+  transition: top 0.5s linear, right 0.5s linear, opacity 0.5s linear;
+  img {
+    // width: 90%;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
